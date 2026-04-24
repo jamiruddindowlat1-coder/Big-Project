@@ -1,0 +1,32 @@
+# .gitignore for .NET and React
+
+# .NET
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# React / Frontend
+my-frontend/node_modules/
+my-frontend/dist/
+my-frontend/build/
+my-frontend/.env.local
+my-frontend/.env.development.local
+my-frontend/.env.test.local
+my-frontend/.env.production.local
+
+# Debugging logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+Thumbs.db

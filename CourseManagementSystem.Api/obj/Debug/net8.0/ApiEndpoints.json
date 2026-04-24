@@ -1,5 +1,434 @@
 [
   {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AccountsController",
+    "Method": "GetLedger",
+    "RelativePath": "api/Accounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CourseManagementSystem.Core.Models.Entities.AccountTransaction, CourseManagementSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Money Receipt / Receive (Collections)"
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AccountsController",
+    "Method": "ReceiveNewPayment",
+    "RelativePath": "api/Accounts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transaction",
+        "Type": "CourseManagementSystem.Core.Models.Entities.AccountTransaction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CourseManagementSystem.Core.Models.Entities.AccountTransaction",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Money Receipt / Receive (Collections)"
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AccountsController",
+    "Method": "UpdateEntry",
+    "RelativePath": "api/Accounts/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "transaction",
+        "Type": "CourseManagementSystem.Core.Models.Entities.AccountTransaction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Money Receipt / Receive (Collections)"
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AccountsController",
+    "Method": "DeleteEntry",
+    "RelativePath": "api/Accounts/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Money Receipt / Receive (Collections)"
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AccountsController",
+    "Method": "GetTotalStats",
+    "RelativePath": "api/Accounts/balance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "Tags": [
+      "Money Receipt / Receive (Collections)"
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AnnouncementsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Announcements",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AnnouncementsController",
+    "Method": "Create",
+    "RelativePath": "api/Announcements",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Api.Controllers.AnnouncementsController\u002BAnnouncementDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AnnouncementsController",
+    "Method": "Update",
+    "RelativePath": "api/Announcements/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Api.Controllers.AnnouncementsController\u002BAnnouncementDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AnnouncementsController",
+    "Method": "Delete",
+    "RelativePath": "api/Announcements/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AnnouncementsController",
+    "Method": "Toggle",
+    "RelativePath": "api/Announcements/{id}/toggle",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AnnouncementsController",
+    "Method": "GetAllAdmin",
+    "RelativePath": "api/Announcements/all-admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AnnouncementsController",
+    "Method": "GetByAudience",
+    "RelativePath": "api/Announcements/by-audience/{audience}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "audience",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AnnouncementsController",
+    "Method": "GetForStudent",
+    "RelativePath": "api/Announcements/student",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AnnouncementsController",
+    "Method": "GetForSpecificStudent",
+    "RelativePath": "api/Announcements/student/{studentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AnnouncementsController",
+    "Method": "GetForTeacher",
+    "RelativePath": "api/Announcements/teacher",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Assignments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "Create",
+    "RelativePath": "api/Assignments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Core.DTOs.AssignmentCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "GetById",
+    "RelativePath": "api/Assignments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "Update",
+    "RelativePath": "api/Assignments/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Core.DTOs.AssignmentUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "Delete",
+    "RelativePath": "api/Assignments/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "GetByCourse",
+    "RelativePath": "api/Assignments/by-course/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "GetByTeacher",
+    "RelativePath": "api/Assignments/by-teacher-id/{teacherId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teacherId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "Grade",
+    "RelativePath": "api/Assignments/grade/{submissionId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "submissionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Core.DTOs.GradeSubmissionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "GetMySubmissions",
+    "RelativePath": "api/Assignments/my-submissions/{studentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "GetSubmissions",
+    "RelativePath": "api/Assignments/submissions/{assignmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assignmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.AssignmentsController",
+    "Method": "Submit",
+    "RelativePath": "api/Assignments/submit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Core.DTOs.SubmissionCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CourseManagementSystem.Api.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -44,7 +473,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
+        "Name": "dto",
         "Type": "CourseManagementSystem.Api.Controllers.AuthController\u002BUserRegisterDto",
         "IsRequired": true
       }
@@ -280,6 +709,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.DashboardController",
+    "Method": "GetStats",
+    "RelativePath": "api/Dashboard/stats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CourseManagementSystem.Api.Controllers.EnrollmentsController",
     "Method": "GetAll",
     "RelativePath": "api/Enrollments",
@@ -298,8 +737,351 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "enrollment",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Api.Controllers.EnrollmentsController\u002BEnrollmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.EnrollmentsController",
+    "Method": "Update",
+    "RelativePath": "api/Enrollments/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Api.Controllers.EnrollmentsController\u002BEnrollmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.EnrollmentsController",
+    "Method": "Delete",
+    "RelativePath": "api/Enrollments/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.PaymentsController",
+    "Method": "GetPayments",
+    "RelativePath": "api/Payments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "Tags": [
+      "Payments (Old)"
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.PaymentsController",
+    "Method": "CreatePayment",
+    "RelativePath": "api/Payments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Api.Controllers.PaymentsController\u002BSimplePaymentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Payments (Old)"
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.PaymentsController",
+    "Method": "UpdatePayment",
+    "RelativePath": "api/Payments/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "payment",
+        "Type": "CourseManagementSystem.Core.Models.Entities.Payment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Payments (Old)"
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.PaymentsController",
+    "Method": "DeletePayment",
+    "RelativePath": "api/Payments/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Payments (Old)"
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.SchedulesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Schedules",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.SchedulesController",
+    "Method": "Create",
+    "RelativePath": "api/Schedules",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Api.Controllers.SchedulesController\u002BScheduleCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.SchedulesController",
+    "Method": "Delete",
+    "RelativePath": "api/Schedules/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.SchedulesController",
+    "Method": "GetByCourse",
+    "RelativePath": "api/Schedules/by-course/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.SchedulesController",
+    "Method": "GetByStudent",
+    "RelativePath": "api/Schedules/by-student/{studentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.SchedulesController",
+    "Method": "GetByTeacher",
+    "RelativePath": "api/Schedules/by-teacher/{teacherId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teacherId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.StudentsController",
+    "Method": "GetStudents",
+    "RelativePath": "api/Students",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CourseManagementSystem.Core.Models.Entities.User, CourseManagementSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.StudentsController",
+    "Method": "CreateStudent",
+    "RelativePath": "api/Students",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Api.Controllers.CreateStudentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CourseManagementSystem.Core.Models.Entities.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.StudentsController",
+    "Method": "GetStudent",
+    "RelativePath": "api/Students/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CourseManagementSystem.Core.Models.Entities.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.StudentsController",
+    "Method": "UpdateStudent",
+    "RelativePath": "api/Students/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "CourseManagementSystem.Api.Controllers.UpdateStudentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.StudentsController",
+    "Method": "DeleteStudent",
+    "RelativePath": "api/Students/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.StudentsController",
+    "Method": "GetStudentDashboard",
+    "RelativePath": "api/Students/{id}/dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.TeacherController",
+    "Method": "GetTeacherDashboard",
+    "RelativePath": "api/Teacher/{id}/dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -333,15 +1115,36 @@
   },
   {
     "ContainingType": "CourseManagementSystem.Api.Controllers.TeacherController",
-    "Method": "Login",
-    "RelativePath": "api/Teacher/login",
-    "HttpMethod": "POST",
+    "Method": "Delete",
+    "RelativePath": "api/Teacher/delete/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "credentials",
-        "Type": "CourseManagementSystem.Api.Controllers.TeacherController\u002BTeacherLoginDto",
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CourseManagementSystem.Api.Controllers.TeacherController",
+    "Method": "Update",
+    "RelativePath": "api/Teacher/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "CourseManagementSystem.Api.Controllers.TeacherController\u002BTeacherUpdateDto",
         "IsRequired": true
       }
     ],

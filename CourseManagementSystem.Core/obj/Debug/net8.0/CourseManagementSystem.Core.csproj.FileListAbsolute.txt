@@ -1,12 +1,13 @@
-D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\bin\Debug\net8.0\CourseManagementSystem.Core.deps.json
-D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\bin\Debug\net8.0\CourseManagementSystem.Core.runtimeconfig.json
-D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\bin\Debug\net8.0\CourseManagementSystem.Core.dll
-D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\bin\Debug\net8.0\CourseManagementSystem.Core.pdb
 D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\obj\Debug\net8.0\CourseManagementSystem.Core.csproj.AssemblyReference.cache
 D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\obj\Debug\net8.0\CourseManagementSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
 D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\obj\Debug\net8.0\CourseManagementSystem.Core.AssemblyInfoInputs.cache
 D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\obj\Debug\net8.0\CourseManagementSystem.Core.AssemblyInfo.cs
 D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\obj\Debug\net8.0\CourseManagementSystem.Core.csproj.CoreCompileInputs.cache
+D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\obj\Debug\net8.0\CourseManagementSystem.Core.sourcelink.json
+D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\bin\Debug\net8.0\CourseManagementSystem.Core.deps.json
+D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\bin\Debug\net8.0\CourseManagementSystem.Core.runtimeconfig.json
+D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\bin\Debug\net8.0\CourseManagementSystem.Core.dll
+D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\bin\Debug\net8.0\CourseManagementSystem.Core.pdb
 D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\obj\Debug\net8.0\CourseManagementSystem.Core.dll
 D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\obj\Debug\net8.0\refint\CourseManagementSystem.Core.dll
 D:\Big Project\CourseManagementSystem\CourseManagementSystem.Core\obj\Debug\net8.0\CourseManagementSystem.Core.pdb

@@ -1,4 +1,5 @@
 ﻿using CourseManagementSystem.Core.Interfaces;
+using CourseManagementSystem.Core.Models.Entities;
 using CourseManagementSystem.Infrastructure.Data;
 using CourseManagementSystem.Infrastructure.Repositories;
 using CourseManagementSystem.Infrastructure.Services;
@@ -7,16 +8,19 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Controllers + JSON Fix
+// ✅ Controllers + JSON Fix (CaseInsensitive যোগ করা হয়েছে)
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
         options.JsonSerializerOptions.WriteIndented = true;
+        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;         // ✅ নতুন
+        options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;                        // ✅ নতুন — এটাই মূল fix
     });
 
 // Database
@@ -28,6 +32,7 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IAssignmentRepository, AssignmentRepository>();
 
 // Services
 builder.Services.AddScoped<ICategoryService, CategoryService>();
@@ -88,6 +93,53 @@ builder.Services.AddCors(o =>
 });
 
 var app = builder.Build();
+
+// ✅ SEED DATA
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.EnsureCreated();
+
+    if (!db.Users.Any())
+    {
+        db.Users.AddRange(
+            new User
+            {
+                Name = "Admin",
+                Email = "admin@gmail.com",
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"),
+                Role = "admin",
+                CreatedAt = DateTime.Now
+            },
+            new User
+            {
+                Name = "Miah",
+                Email = "mia@gmail.com",
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword("654321"),
+                Role = "teacher",
+                CreatedAt = DateTime.Now
+            },
+            new User
+            {
+                Name = "Jamshed",
+                Email = "jamshed@gmail.com",
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"),
+                Role = "student",
+                CreatedAt = DateTime.Now
+            },
+            new User
+            {
+                Name = "Mohit",
+                Email = "mohit@gmail.com",
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"),
+                Role = "user",
+                CreatedAt = DateTime.Now
+            }
+        );
+        db.SaveChanges();
+        Console.WriteLine("✅ Seed data created successfully!");
+    }
+}
 
 if (app.Environment.IsDevelopment())
 {
