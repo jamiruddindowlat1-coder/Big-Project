@@ -112,7 +112,7 @@ namespace CourseManagementSystem.Api.Controllers
                 nid = user.Nid,
                 address = user.Address,
                 phone = user.Phone,
-                designation = user.Expertise || user.Role,
+               designation = user.Expertise ?? user.Role,
                 status = user.Status,
                 joinDate = user.JoinDate,
                 profilePicture = user.ProfilePicture
@@ -138,7 +138,7 @@ namespace CourseManagementSystem.Api.Controllers
                 nid = user.Nid,
                 address = user.Address,
                 phone = user.Phone,
-                designation = user.Expertise || user.Role,
+                designation = user.Expertise ?? user.Role,
                 status = user.Status,
                 joinDate = user.JoinDate,
                 profilePicture = user.ProfilePicture
